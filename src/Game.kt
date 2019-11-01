@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     }
 
     //Player Status
-    println("(Aura: $auraColor " +
+    println("(Aura: $auraColor)" +
         "(Blessed: ${if (isBlessed) "YES" else "NO"})")
     println("$name $healthStatus")
 }
