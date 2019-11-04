@@ -13,8 +13,24 @@ fun main(args: Array<String>) {
     //Player Status
     printPlayerStatus(auraColor, isBlessed, name, healthStatus)
 
-    castFireball()
+    val inebriationLevel = castFireball(44)
+
+    val inebriationStatus = formatInebriationStatus(inebriationLevel)
+    printInebriationLevel(inebriationStatus, name)
 }
+
+private fun formatInebriationStatus(inebriationLevel: Int) =
+    when (inebriationLevel) {
+        in 1..10 -> "tipsy"
+        in 11..20 -> "sloshed"
+        in 21..30 -> "soused"
+        in 31..40 -> "stewed"
+        in 41..50 -> "t0aSt3d"
+        else -> "sober"
+    }
+
+private fun printInebriationLevel(inebriationStatus: String, name: String) =
+    println("$name is $inebriationStatus!")
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
     when (healthPoints) {
@@ -42,11 +58,16 @@ private fun printPlayerStatus(
     println("$name $healthStatus")
 }
 
-private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean): String {
-    val auraVisible = (isBlessed && healthPoints > 50) || isImmortal
-    val auraColor = if (auraVisible) "GREEN" else "NONE"
-    return auraColor
-}
+//private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean): String {
+//    val auraVisible = (isBlessed && healthPoints > 50) || isImmortal
+//    val auraColor = if (auraVisible) "GREEN" else "NONE"
+//    return auraColor
+//}
 
-private fun castFireball(numFireballs: Int = 2) =
-    println("A glass of Fireball springs into existence. (x$numFireballs)")
+private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean) =
+    if (isBlessed && healthPoints > 50 || isImmortal) "GREEN" else "NONE"
+
+private fun castFireball(numFireballs: Int = 2): Int {
+    println ("A glass of Fireball springs into existence. (x$numFireballs)")
+    return numFireballs
+}
