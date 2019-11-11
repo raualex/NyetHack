@@ -3,6 +3,7 @@ const val TAVERN_NAME = "Tearnyl's Folly"
 
 var playerGold = 10
 var playerSilver = 10
+var totalDragonsBreathGallons = 5.0
 
 fun main(args: Array<String>) {
     placeOrder("shandy,Dragon's Breath,5.91")
@@ -11,17 +12,33 @@ fun main(args: Array<String>) {
 fun performPurchase(price: Double) {
     displayBalance()
     val totalPurse = playerGold + ( playerSilver / 100.0 )
-    println("Total Purse: $totalPurse")
-    println("Purchasing item for $price")
+//    println("Total Purse: $totalPurse")
+//    println("Purchasing item for $price")
 
     val remainingBalance = totalPurse - price
-    println("Remaining Balance: ${"%.2f".format(remainingBalance)}")
+//    println("Remaining Balance: ${"%.2f".format(remainingBalance)}")
 
     val remainingGold = remainingBalance.toInt()
     val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
-    playerGold = remainingGold
-    playerSilver = remainingSilver
-    displayBalance()
+
+    if (remainingGold >= 0.0 || remainingSilver >= 0.0) {
+        reduceGallonsInCask()
+        playerGold = remainingGold
+        playerSilver = remainingSilver
+        displayBalance()
+    } else {
+        println("You do not have enough money to purchase another drink.")
+    }
+}
+
+private fun reduceGallonsInCask() {
+    var reducedGallons = totalDragonsBreathGallons - 0.125
+    totalDragonsBreathGallons = reducedGallons
+    if (reducedGallons == 3.5) {
+        println("A pint has been removed from the cask. Gallons left in cask: $totalDragonsBreathGallons")
+    } else {
+        println("A pint has been removed from the cask.")
+    }
 }
 
 private fun displayBalance() {
@@ -49,6 +66,7 @@ private fun placeOrder(menuData: String) {
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
 
+    performPurchase(price.toDouble())
     performPurchase(price.toDouble())
 
     val phrase = if (name == "Dragon's Breath" || name == "DRAGON'S BREATH") {
