@@ -4,6 +4,7 @@ const val TAVERN_NAME = "Tearnyl's Folly"
 var playerGold = 10
 var playerSilver = 10
 var totalDragonsBreathGallons = 5.0
+var totalDragonCoin = 5.0
 
 fun main(args: Array<String>) {
     placeOrder("shandy,Dragon's Breath,5.91")
@@ -31,6 +32,10 @@ fun performPurchase(price: Double) {
     }
 }
 
+private fun toDragonCoin(totalGold: Double) {
+    var newDragonCoin = totalDragonCoin - totalGold
+}
+
 private fun reduceGallonsInCask() {
     var reducedGallons = totalDragonsBreathGallons - 0.125
     totalDragonsBreathGallons = reducedGallons
@@ -42,7 +47,8 @@ private fun reduceGallonsInCask() {
 }
 
 private fun displayBalance() {
-    println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
+//    println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
+    println("Player's purse balance: DragonCoin: $totalDragonCoin")
 }
 
 private fun toDragonSpeak(phrase: String) =
