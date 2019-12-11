@@ -11,7 +11,7 @@ val menuList = File("data/tavern-menu-items.txt")
     .readText()
     .split("\n")
 val readOnlyPatronList = patronList.toList()
-var formattedMenu = listOf("*** Welcome to $TAVERN_NAME ***", " ")
+var formattedMenu = listOf<Any>("*** Welcome to $TAVERN_NAME ***", " ")
 
 fun main(args: Array<String>) {
     if (patronList.contains("Eli")) {
@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
         val name = "$first $last"
         uniquePatrons += name
     }
-    println(uniquePatrons)
+//    println(uniquePatrons)
 
     var orderCount = 0
     while (orderCount <= 9) {
@@ -48,11 +48,11 @@ fun main(args: Array<String>) {
 fun performPurchase(price: Double) {
     displayBalance()
     val totalPurse = playerGold + ( playerSilver / 100.0 )
-    println("Total Purse: $totalPurse")
-    println("Purchasing item for $price")
+//    println("Total Purse: $totalPurse")
+//    println("Purchasing item for $price")
 
     val remainingBalance = totalPurse - price
-    println("Remaining Balance: ${"%.2f".format(remainingBalance)}")
+//    println("Remaining Balance: ${"%.2f".format(remainingBalance)}")
 
     val remainingGold = remainingBalance.toInt()
     val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
@@ -62,7 +62,7 @@ fun performPurchase(price: Double) {
 }
 
 private fun displayBalance() {
-    println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
+//    println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
 }
 
 private fun toDragonSpeak(phrase: String) =
@@ -80,11 +80,11 @@ private fun toDragonSpeak(phrase: String) =
 private fun placeOrder(patronName: String, menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
-    println("$patronName speaks with $tavernMaster about their order.")
+//    println("$patronName speaks with $tavernMaster about their order.")
 
     val (type, name, price) = menuData.split(',')
     val message = "$patronName buys a $name ($type) for $price."
-    println(message)
+//    println(message)
 
 //    performPurchase(price.toDouble())
 
@@ -93,14 +93,29 @@ private fun placeOrder(patronName: String, menuData: String) {
     } else {
         "$patronName says: Thanks for the $name"
     }
-    println(phrase)
+//    println(phrase)
 }
 
 private fun createFormattedMenuItems() {
     var itemCount = 0
     while (itemCount <= menuList.size - 1) {
-        formattedMenu += menuList[itemCount]
+        formattedMenu += formatItem(menuList[itemCount])
         itemCount++
     }
 }
 
+private fun formatItem(item: String) {
+    var (type, drink, price) = item.split(",")
+    drink = drink.capitalize()
+    println("$drink" + " " + "$price")
+
+}
+
+private fun capitalizeDrinkNames(drinkName: String) {
+    var splitDrink = drinkName.split(" ")
+    
+}
+
+private fun createDots(drinkTitle: String) {
+//    if (drinkTitle = )
+}
