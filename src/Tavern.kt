@@ -11,6 +11,7 @@ val menuList = File("data/tavern-menu-items.txt")
     .readText()
     .split("\n")
 val readOnlyPatronList = patronList.toList()
+var formattedMenu = listOf("*** Welcome to $TAVERN_NAME ***", " ")
 
 fun main(args: Array<String>) {
     if (patronList.contains("Eli")) {
@@ -39,6 +40,9 @@ fun main(args: Array<String>) {
             menuList.shuffled().first())
         orderCount++
     }
+
+    createFormattedMenuItems()
+    println(formattedMenu)
 }
 
 fun performPurchase(price: Double) {
@@ -91,3 +95,12 @@ private fun placeOrder(patronName: String, menuData: String) {
     }
     println(phrase)
 }
+
+private fun createFormattedMenuItems() {
+    var itemCount = 0
+    while (itemCount <= menuList.size - 1) {
+        formattedMenu += menuList[itemCount]
+        itemCount++
+    }
+}
+
