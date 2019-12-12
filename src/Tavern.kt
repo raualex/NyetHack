@@ -42,7 +42,10 @@ fun main(args: Array<String>) {
     }
 
     createFormattedMenuItems()
-    println(formattedMenu)
+
+    for (menuLine in formattedMenu) {
+        println(menuLine)
+    }
 }
 
 fun performPurchase(price: Double) {
@@ -104,18 +107,45 @@ private fun createFormattedMenuItems() {
     }
 }
 
-private fun formatItem(item: String) {
+private fun formatItem(item: String): String {
     var (type, drink, price) = item.split(",")
-    drink = drink.capitalize()
-    println("$drink" + " " + "$price")
-
+    drink = capitalizeDrinkNames(drink)
+    var dots = createDots(drink)
+    var finalDrink = ""
+    finalDrink += "$drink" + "$dots" + "$price"
+    return finalDrink
 }
 
-private fun capitalizeDrinkNames(drinkName: String) {
+private fun capitalizeDrinkNames(drinkName: String): String {
     var splitDrink = drinkName.split(" ")
-    
+    var newWord = ""
+    for (word in splitDrink) {
+        if (word == "Breath" ||
+                word == "Temple" ||
+                word == "LaCroix" ||
+                word == "hump" ||
+                word == "boilermaker") {
+            newWord += word.capitalize()
+        } else if (word != "of") {
+            newWord += word.capitalize() + " "
+        } else {
+            newWord += word + " "
+        }
+    }
+    return newWord
 }
 
-private fun createDots(drinkTitle: String) {
-//    if (drinkTitle = )
+private fun createDots(drinkTitle: String): String {
+    var totalDots = ""
+    if (drinkTitle == "Pickled Camel Hump") {
+        totalDots = "......"
+    } else if (drinkTitle == "Iced Boilermaker" ||
+        drinkTitle == "Goblet of LaCroix") {
+        totalDots = "......."
+    } else if (drinkTitle == "Shirley's Temple") {
+        totalDots = "........"
+    } else if (drinkTitle == "Dragon's Breath") {
+        totalDots = "........."
+    }
+    return totalDots
 }
