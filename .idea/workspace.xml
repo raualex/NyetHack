@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tavern.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="690">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -84,9 +84,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="193" />
-    <option name="y" value="259" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="25" />
     <option name="width" value="1440" />
     <option name="height" value="814" />
   </component>
@@ -196,7 +196,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="25" width="1440" height="814" extended-state="6" />
+    <frame x="10" y="25" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
@@ -255,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tavern.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="690">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
