@@ -1,5 +1,7 @@
+package com.bignerdranch.nyethack
+
 import java.io.File
-import kotlin.math.roundToInt
+
 const val TAVERN_NAME = "Tearnyl's Folly"
 
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
@@ -36,8 +38,10 @@ fun main(args: Array<String>) {
 
     var orderCount = 0
     while (orderCount <= 9) {
-        placeOrder(uniquePatrons.shuffled().first(),
-            menuList.shuffled().first())
+        placeOrder(
+            uniquePatrons.shuffled().first(),
+            menuList.shuffled().first()
+        )
         orderCount++
     }
 
@@ -80,7 +84,7 @@ private fun placeOrder(patronName: String, menuData: String) {
 }
 
 private fun displayPatronBalances() {
-    patronGold.forEach {patron, balance ->
+    patronGold.forEach { patron, balance ->
         println("$patron, balance: ${"%.2f".format(balance)}")
     }
 }
