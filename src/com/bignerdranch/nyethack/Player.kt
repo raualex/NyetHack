@@ -46,7 +46,7 @@ class Player(_name: String,
         }
 
     fun castFireball(numFireballs: Int = 2) =
-            println("A glass of Fireball springs into existence. (x$numFireballs)")
+            println("A glass of Fireball springs into existence. Delicious! (x$numFireballs)")
 
     private fun selectHometown() = File("data/towns.txt")
         .readText()
