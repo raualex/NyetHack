@@ -4,7 +4,8 @@
     <list default="true" id="fed4d621-29d9-44b8-b0b2-0e63a7b917ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KotlinSandbox.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../out/production/KotlinSandbox/HelloKt.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../out/production/KotlinSandbox/META-INF/KotlinSandbox.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/Hello.kt" beforeDir="false" />
@@ -21,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="-493">
+              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -33,17 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -80,13 +81,14 @@
         <option value="$PROJECT_DIR$/src/Student.kt" />
         <option value="$PROJECT_DIR$/data/towns.txt" />
         <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Room.kt" />
-        <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt" />
-        <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt" />
         <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt" />
+        <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt" />
+        <option value="$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
@@ -216,10 +218,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
-    <editor active="true" />
+    <frame x="1" y="23" width="1440" height="813" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17596567" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17596567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -229,7 +230,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.370319" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.370319" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39835164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,24 +290,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Navigation.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Player.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/bignerdranch/nyethack/Game.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="-493">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
         </state>
       </provider>
     </entry>
