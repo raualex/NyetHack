@@ -48,6 +48,7 @@ object Game {
             "move" -> move(argument)
             "exit" -> endGame()
             "quit" -> endGame()
+            "map" -> map()
             else -> commandNotFound()
         }
 
@@ -73,5 +74,15 @@ object Game {
     private fun endGame() {
         gameOver = true
         println("Farewell, Adventurer!")
+    }
+
+    private fun map() {
+        when (currentRoom.name) {
+            "Town Square" -> println("X O O\nO O")
+            "Tavern" -> println("O X O\nO O")
+            "Back Room" -> println("O O X\nO O")
+            "Long Corridor" -> println("O O O\nX O")
+            "Generic Room" -> println("O O O\nO X")
+        }
     }
 }
