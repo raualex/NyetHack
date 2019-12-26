@@ -49,6 +49,7 @@ object Game {
             "exit" -> endGame()
             "quit" -> endGame()
             "map" -> map()
+            "ring" -> currentRoom.ringBell()
             else -> commandNotFound()
         }
 
