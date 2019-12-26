@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
 }
 
 object Game {
+    private var gameOver = false
     private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
 
@@ -20,7 +21,7 @@ object Game {
     }
 
     fun play() {
-        while(true) {
+        while(!gameOver) {
             println(currentRoom.description())
             println(currentRoom.load())
 
@@ -45,6 +46,8 @@ object Game {
 
         fun processCommand() = when (command.toLowerCase()) {
             "move" -> move(argument)
+            "exit" -> endGame()
+            "quit" -> endGame()
             else -> commandNotFound()
         }
 
@@ -66,4 +69,9 @@ object Game {
             } catch (e: Exception) {
                 "Invalid direction: $directionInput."
             }
+
+    private fun endGame() {
+        gameOver = true
+        println("Farewell, Adventurer!")
+    }
 }
