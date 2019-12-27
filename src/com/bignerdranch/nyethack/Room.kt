@@ -1,5 +1,11 @@
 package com.bignerdranch.nyethack
 
+//fun Room.configurePitGoblin(block: Room.(Goblin) -> Goblin): Room {
+//    val goblin = block(Goblin("Pit Goblin", description = "An Evil Pit Goblin"))
+//    monster = goblin
+//    return this
+//}
+
 open class Room(val name: String) {
     protected open val dangerLevel = 5
     var monster: Monster? = Goblin()
