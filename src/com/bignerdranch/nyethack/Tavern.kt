@@ -14,6 +14,17 @@ val menuList = File("data/tavern-menu-items.txt")
 val patronGold = mutableMapOf<String, Double>()
 val readOnlyPatronList = patronList.toList()
 
+private fun String.toDragonSpeak(): String = this.replace(Regex("[aeiouAEIOU]")) {
+    when (it.value) {
+        "a", "A" -> "4"
+        "e", "E" -> "3"
+        "i", "I" -> "1"
+        "o", "O" -> "0"
+        "u", "U" -> "|_|"
+        else -> it.value
+    }
+}
+
 fun main(args: Array<String>) {
     if (patronList.contains("Eli")) {
         println("The tavern master says: Eli's in the back playing cards.")
@@ -54,18 +65,6 @@ fun performPurchase(price: Double, patronName: String) {
     patronGold[patronName] = totalPurchase - price
 }
 
-private fun toDragonSpeak(phrase: String) =
-    phrase.replace(Regex("[aeiouAEIOU]")) {
-        when (it.value) {
-            "a", "A" -> "4"
-            "e", "E" -> "3"
-            "i", "I" -> "1"
-            "o", "O" -> "0"
-            "u", "U" -> "|_|"
-            else -> it.value
-        }
-    }
-
 private fun placeOrder(patronName: String, menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
@@ -77,7 +76,7 @@ private fun placeOrder(patronName: String, menuData: String) {
     performPurchase(price.toDouble(), patronName)
 
     val phrase = if (name == "Dragon's Breath" || name == "DRAGON'S BREATH") {
-        "$patronName exclaims: ${toDragonSpeak("Ah, delicious $name!")}"
+        "$patronName exclaims: ${"Ah, delicious $name!".toDragonSpeak()}"
     } else {
         "$patronName says: Thanks for the $name"
     }
